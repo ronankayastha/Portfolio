@@ -1,0 +1,66 @@
+
+:host {
+    display: block;
+    color: #373737;
+    padding: 3rem 2rem;
+}
+
+ul:has(ul) {
+    padding: 0%;
+    list-style: none;
+}
+
+ul li:has(ul) {
+    margin-top: 2rem;
+}
+
+ul li h2 {
+    color:#702a80;
+}
+
+ul li h4 {
+    color: #564C4D;
+}
+
+/* PC */
+:host.pc ul li:has(ul) {
+    width: max-content;
+    position: relative;
+    margin-left: 5rem;
+}
+
+:host.pc ul li:has(ul)::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50px;
+    top: 5px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: rgb(4, 255, 4);
+}
+
+:host.pc ul li:has(ul)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 130%;
+    left: -50px;
+    top: 5%;
+    z-index: 1;
+    background-color: #564C4D;
+}
+
+:host.pc ul li:has(ul):last-child::after {  
+    height: 100%;
+}
+hr{
+    
+    display: block;
+height: 1px;
+border: 0;
+border-top: 4px solid #373737;
+margin: 1em 0;
+padding: 0;
+  }

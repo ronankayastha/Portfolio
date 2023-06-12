@@ -1,0 +1,70 @@
+:host {
+    display: block;
+    color: #373737;
+    padding: 2rem 3rem;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+section h2 {
+    color: #702a80;
+}
+
+section h3 {
+    margin-top: 0.5rem;
+    color: #564C4D;
+}
+
+section ul {
+    margin-top: 0.5rem;
+    list-style: circle;
+}
+
+/* PC */
+
+:host.pc section {
+    margin-left: 5rem;
+    position: relative;
+}
+
+:host.pc section h3 span:nth-child(2) {
+    color: #373737;
+}
+
+:host.pc section::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -60px;
+    top: 5px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: #702a80;
+}
+
+:host.pc section::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 130%;
+    left: -50px;
+    top: 5%;
+    z-index: 1;
+    background-color: #564C4D;
+}
+
+:host.pc section:last-child:after {
+    height: 100%;
+}
+hr{
+    
+    display: block;
+height: 1px;
+border: 0;
+border-top: 4px solid #373737;
+margin: 1em 0;
+padding: 0;
+  }
